@@ -1,0 +1,19 @@
+.spacing {
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filtered-image {
+    width: 500px;
+    height: 275px;
+  }
+  
+  .header {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hover-change:hover {
+    cursor: pointer;
+  }

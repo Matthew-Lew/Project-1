@@ -1,0 +1,26 @@
+<template>
+    <div class="shadow slds-box">
+        <div>
+            <h1 class="margin-bottom slds-text-heading_medium"><strong>Personal Info:</strong></h1>
+        </div>
+        <lightning-record-form
+        record-id={contactId.data}
+        object-api-name="Contact"
+        fields={personalFields}
+        columns="2"
+        mode="view"
+        >   
+        </lightning-record-form>
+        <div>
+            <h1 class="margin-bottom slds-text-heading_medium"><strong>Billing Info:</strong></h1>
+        </div>
+        <lightning-record-form
+        record-id={contactId.data}
+        object-api-name="Contact"
+        fields={billingFields}
+        columns="2"
+        mode="view"
+        >   
+        </lightning-record-form>
+    </div>
+</template>

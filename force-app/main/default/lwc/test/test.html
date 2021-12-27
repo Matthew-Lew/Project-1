@@ -1,0 +1,12 @@
+<template>
+    <div class="overflow shadow slds-box">
+        <div class="slds-text-heading_medium"><strong>Your Purchases: </strong></div>
+        <template for:each={currentUserPurchases} for:item="purchase">
+            <lightning-card class="slds-p-around_medium" key={purchase.id}>
+                <div class="inline"><strong>Product:</strong> {purchase.Product__r.Name}&nbsp;</div>
+                <div class="inline"><strong>Cost:</strong> ${purchase.Total_Cost__c} &nbsp;</div>
+                <div class="inline"><strong>Date of Purchase: </strong>  {purchase.Date_of_Purchase__c}</div>
+            </lightning-card>
+        </template>
+    </div>
+</template>

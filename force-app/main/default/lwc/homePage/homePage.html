@@ -1,0 +1,53 @@
+<template>
+	<div class="slds-grid slds-grid_align-center spacing-bottom">
+		<c-carousel></c-carousel>
+	</div>
+	<template if:true={displayModal}>
+		<c-modal oncancelclick={handleContentClick}></c-modal>
+	</template>
+
+	<div class="slds-grid">
+
+		<div class="slds-col slds-size_1-of-5">
+			<c-sorting-bar onradiobuttonchange={handleRadioButton}></c-sorting-bar>
+		</div>
+		<div class="slds-col">
+			<div class="slds-col">
+				<template if:true={displayVideoGames}>
+					<c-content-block oncontentclick={handleContentClick} title={gamesTitle} gamer-list={gamesList}>
+					</c-content-block>
+				</template>
+			</div>
+			<div class="slds-col">
+				<template if:true={displayTVShows}>
+					<c-content-block oncontentclick={handleContentClick} title={showTitle} gamer-list={showList}>
+					</c-content-block>
+				</template>
+			</div>
+			<div class="slds-col">
+				<template if:true={displayMovies}>
+					<c-content-block oncontentclick={handleContentClick} title={movieTitle} gamer-list={movieList}>
+					</c-content-block>
+				</template>
+			</div>
+			<div>
+				<template if:true={displayFilteredMovies}>
+					<c-filtered-block oncontentclick={handleContentClick} title={movieTitle} gamer-list={movieList}>
+					</c-filtered-block>
+				</template>
+			</div>
+			<div>
+				<template if:true={displayFilteredVideoGames}>
+					<c-filtered-block oncontentclick={handleContentClick} title={gamesTitle} gamer-list={gamesList}>
+					</c-filtered-block>
+				</template>
+			</div>
+			<div>
+				<template if:true={displayFilteredTVShows}>
+					<c-filtered-block oncontentclick={handleContentClick} title={showTitle} gamer-list={showList}>
+					</c-filtered-block>
+				</template>
+			</div>
+		</div>
+	</div>
+</template>

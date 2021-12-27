@@ -1,0 +1,17 @@
+<template>
+  <div class="slds-is-relative">
+    <template for:each={slides} for:item="slide">
+      <div key={slide.id}>
+        <template if:true={slide.display}>
+          <img class="carousel-image" src={slide.image} alt="">
+          <div class="text-content">
+            <!-- <h1 class="slds-text-heading_large">{slide.caption}</h1> -->
+            <!-- <div>Enter your description here</div> -->
+          </div>
+        </template>
+      </div>
+    </template>
+    <a class="scrollbuttonleft" onclick={scrollLeft}>&lt;</a>
+    <a class="scrollbuttonright" onclick={scrollRight}>&gt;</a>
+  </div>
+</template>
