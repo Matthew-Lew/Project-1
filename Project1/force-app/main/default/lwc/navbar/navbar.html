@@ -1,7 +1,9 @@
 <template>
   <div class="slds-context-bar">
     <div class="slds-context-bar__primary">
-      <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+      <div
+        class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover"
+      >
         <span class="slds-context-bar__label-action slds-context-bar__app-name">
           <span class="slds-truncate" title="App Name">Matthew's Media</span>
         </span>
@@ -26,7 +28,11 @@
         <template if:true={loggedIn}>
           <div>
             <li class="nav-item slds-context-bar__item">
-              <a href="/secur/logout.jsp" class="slds-context-bar__label-action" title="Menu Item">
+              <a
+                href="/secur/logout.jsp"
+                class="slds-context-bar__label-action"
+                title="Menu Item"
+              >
                 <span class="slds-truncate" title="Menu Item">Logout</span>
               </a>
             </li>
@@ -35,7 +41,11 @@
         <template if:false={loggedIn}>
           <div>
             <li class="nav-item slds-context-bar__item">
-              <a href="/login" class="slds-context-bar__label-action" title="Menu Item">
+              <a
+                href="/login"
+                class="slds-context-bar__label-action"
+                title="Menu Item"
+              >
                 <span class="slds-truncate" title="Menu Item">Login</span>
               </a>
             </li>

@@ -1,4 +1,4 @@
-public class apexController {
+public without sharing class apexController {
 
     @AuraEnabled
     public static List<User> getUser(){
